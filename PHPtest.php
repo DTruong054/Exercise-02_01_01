@@ -17,8 +17,10 @@
 <body>
     <p>
         <h3>This is HTML</h3>
+        <!-- How to start PHP code  -->
     <?php
         echo "The folloing is a PHP function call.";
+        //info about PHP
         phpinfo();
     ?>
     </p>

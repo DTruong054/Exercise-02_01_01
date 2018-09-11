@@ -18,11 +18,15 @@
     <p>
         <h3>This is HTML</h3>
     <?php
+        //Testing differnce between echo and print
         echo "This text is displayed using standard PHP script delimeters. <br>";
         print "Second String";
+        //HTML in PHP
         print ("<br>Third String");
+        //Differnce between with () and without (). Also tested differnce between "," and "."
         echo "<h1>This is a " . " multiple argument string. </h1>";
         echo ("<h1>This is a " . " multiple argument string. </h1>");
+        //Math option in PHP
         print ("<h2>This is some math " . (2 + 3) . "</h2>");
     ?>
     </p>
