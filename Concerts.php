@@ -17,6 +17,7 @@
     <h1>Central Vally Civic Center</h1>
     <h2>Summer Concert Season</h2>
     <?php
+        //Working with PHP arrays
         $concerts = array("Jimmy Buffet", "Chris Isaak", "Bonnie Raitt", "James Taylor", "Alicia Keys");
         $concerts[] = "Bob Dylan";
         $concerts[] = "Ryan Cabrera";
@@ -29,6 +30,16 @@
         echo "<p> $concerts[4]<br>";
         echo "<p> $concerts[5]<br>";
         echo "<p> $concerts[6]</p>";
+
+
+        //Types of Debugging tools
+        echo "<pre>";
+        print_r($concerts);
+        echo "</pre>";
+
+        echo "<pre>";
+        var_dump($concerts);
+        echo "</pre>";
     ?>
 </body>
 
