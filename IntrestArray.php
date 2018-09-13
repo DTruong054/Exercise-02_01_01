@@ -15,6 +15,7 @@
 <body>
     <h2>Intrest Array</h2>
     <?php
+    //Adds intrests days into an array
         $intrestRate1 = .0725;
         $intrestRate2 = .0750;
         $intrestRate3 = .0775;
@@ -25,6 +26,7 @@
 
         $ratesArray = array($intrestRate1, $intrestRate2, $intrestRate3, $intrestRate4, $intrestRate5, $intrestRate6, $intrestRate7);
 
+        //Puts array in a list
         echo "<pre>";
         var_dump($ratesArray);
         echo "</pre>";
