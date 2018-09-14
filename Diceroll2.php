@@ -4,7 +4,7 @@
     Exercise-02_01_01
     Author: Daniel Truong
     Date: 9.10.18
-    File: DiceRoll.php -->
+    File: DiceRoll2.php -->
 
 <head>
     <meta charset="utf-8" />
@@ -14,14 +14,18 @@
 </head>
 
 <body>
-    <h2>Dice roll</h2>
+    <h2>Dice roll 2</h2>
     <?php
         $faceNameSin = array("one", "two", "three", "four", "five", "six");
         $faceNamePlu = array("ones", "twos", "threes", "fours", "fives", "sixes");
+        $doubleCount = 0;
+        $rollNumber = 1;
+        define("NBR_ROLL", 4);
 
         //Check for doubles
         function checkDoubles($die1, $die2)
         {
+            echo $score;
             global $faceNameSin;
             global $faceNamePlu;
             $returnValue = false;
@@ -72,15 +76,21 @@
             }
         }
         $dice = array();
-        $dice[] = rand(1, 6);
-        $dice[1] = rand(1, 6);
-
-        echo "<p>";
-        $score = $dice[0] + $dice[1];
-        echo "The total score for the roll was $score. <br>";
-        $doubles = checkDoubles($dice[0], $dice[1]);
-        displayScore($score, $doubles);
-        echo "</p>";
+        while ($rollNumber <= NBR_ROLL) {
+            $dice[] = rand(1, 6);
+            $dice[1] = rand(1, 6);
+            echo "<p>";
+            $score = $dice[0] + $dice[1];
+            echo "The total score for the roll was $score. <br>";
+            $doubles = checkDoubles($dice[0], $dice[1]);
+            displayScore($score, $doubles);
+            echo "</p>";
+            if ($doubles) {
+                ++$doubleCount;
+            }
+        ++$rollNumber;
+        }
+        echo "<p>Doubles occurred on $doubleCount of the " .  NBR_ROLL . " rolls.</p>";
     ?>
 </body>
 

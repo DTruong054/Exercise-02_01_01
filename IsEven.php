@@ -44,7 +44,7 @@
         //Random number fun
         //Just extra
         for ($i=0; $i < 40; $i++) { 
-        $randomNumber = rand (1 , 1000000);
+        $randomNumber = number_format(rand (1 , 10000000), 0);
         $returnNumber = $randomNumber % 2 == 0 ? "even" : "odd";
         echo $randomNumber, " is ", $returnNumber, " number", "<br>";
         }
